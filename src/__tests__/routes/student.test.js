@@ -64,16 +64,6 @@ describe('/students', () => {
       expect(res.statusCode).toBe(400);
     })
   })
-  describe('GET', ()=>{
-    const validStudent = {
-      id: '61179836af7ec2297c29d50e'
-    }
-    const getStudent = (params)=>{
-      return request.get('/api/students/:id').send(params)
-    }
-  })
-
-
 });
 
 
