@@ -7,5 +7,5 @@ connectToDB();
 
 
 app.listen(PORT, () => {
-  logger.info(`db is listening on port ${PORT}`);
+  console.log(`db is listening on port ${PORT}`);
 })
