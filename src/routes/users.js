@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const {
   addUser
-} = require('../controllers/Users')
+} = require('../controllers/users')
 
 
 router.post('/', addUser);
