@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 
 
 exports.connectToDB= ()=>{
-  let database = process.env.DB_DATABASE || 'jr-cms-13'
+  let database = process.env.DB_DATABASE || 'jr-cms'
   if(process.env.NODE_ENV==='test'){
     database += '_test';
   }
-  const CONNECTION_STRING = `${process.env.DB_HOST}/${database}` || 'mongodb://localhost:27017/'+database;
+  const CONNECTION_STRING = (process.env.DB_HOST || 'mongodb://localhost:27017/')+database;
 
   const db = mongoose.connection;
 
