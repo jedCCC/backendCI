@@ -17,6 +17,9 @@ app.use(morganLog)
 app.use(cors())
 app.use(express.json())
 // app.use('/api-docs', swaggerUI.server, swaggerUI.setup(swaggerDoc))
+app.get('/', (req, res)=>{
+  res.send('welcome to jr cms')
+})
 app.use('/api', router)
 app.use(errorHandler)
 
