@@ -7,7 +7,7 @@ const authGuard = require('../middlewares/authGuard')
 const router = express.Router()
 
 router.use('/students', studentRouter)
-router.use('/courses', authGuard, courseRouter)
+router.use('/courses', courseRouter)
 router.use('/auth', authRouter)
 router.use('/users', userRouter)
 

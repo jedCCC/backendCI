@@ -4,10 +4,13 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "start": "pm2 start src/index.js --name jrCMS",
+    "poststart": "pm2 log jrCMS",
+    "stop": "pm2 stop jrCMS",
     "dev": "nodemon src/index.js",
     "test": "jest",
     "debug": "nodemon --inspect src/index.js",
-    "test:watch" : "jest --watch"
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +27,7 @@
     "mongoose": "^5.13.6",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12",
+    "pm2": "^5.1.0",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6",
     "winston": "^3.3.3"
